@@ -1,0 +1,54 @@
+1. Ubah Bahasa prolog berikut menjadi bahasa natural :
+	a. Orang(dian)		
+           dian adalah orang
+	b. Mobil(atoz)		
+           atoz adalah mobil
+	c. Suka(dian,atoz)	
+           dian suka mobil atoz
+	d. Dijual(atoz)		
+           atoz dijual
+	e. dapat_membeli(X,Y)	
+	   orang(X),
+	   mobil(Y),
+	   suka(Y),
+	   di jual(Y).
+	  
+           X dapat membeli Y jika
+	   X adalah variabel pengganti orang
+	   Y adalah variabel pengganti mobil
+	   X menyukai Y
+	   Y di jual
+
+	f. suka(_Apa).	
+         anonim suka apa.
+
+2. Ubah bahasa natural berikut kedalam bahasa prolog :
+	a. Ricky mempunyai habi bermain catur	
+           hobi(ricky,catur)
+	b. Embang orangnya pemalas		
+           pemalas(embang)
+	c. Yusida seorang vegetarian		
+           vegetarian(yusida)
+	d. Kusidar pandai bermain gitar		
+           pandai(Kusidar_gitar)
+	e. Mobil yang berwarna merah itu milik Sadek, bermerk BMW.
+	   milik (mobil,sadek),warna(mobil,merah),merek(mobil,bmw).
+	f. Awan seorang pemain piano, berasal dari pontianak bersuku jawa.
+	   pemain(awan,piano),berasal(awan,pontianak),suku(awan,jawa).
+	g. Seseorang dikatakan baik jika mempunyai sifat penyayang dan dermawan.
+	   dikatakan(orang,baik):-sifat(orang,penyayang),sifat(orang,dermawan).
+	h. Seseorang dikatakan pintar jika salah satu dari Matematika atau IPA atau IPS mendapat nilai tinggi.
+	   dikatakan(orang,pintar):-dapat(matematika,tinggi);dapat(ipa,tinggi);dapat(ips,tinggi).
+	i. Setiap orang pasti mati.
+	   orang(_mati).
+
+Macam-macam keyword di visual prolog
+1. facts	: untuk memulai section facts.
+2. domain	: menyatakan jenis variabel atau argumen.
+3. determ	: menentukan bahwa hanya boleh ada satu fakta dari suatu predikat sepanjang program berjalan.
+4. nondeterm	: menentukan bahwa kemungkinan ada sejumlah fakta dari suatu predikat sepanjang program berjalan(default)
+5. clause	: memberikan fakta-fakta yang ada untuk memberikan gambaran kepada VPE dalam melakukan pengujian untuk menjadi solusi dari pertanyaan yang di berikan.
+6. global	: menentukan bahwa section fact adalah global dalam global.
+7. nocopy	: normalnya panggilan fakta akan mengikat variabel ke sebuah string atau ke sebuah object jamak.
+8. Goal		: menyatakan jenis variabel atau arumen.
+9. predicatea	: untuk memulai section facts.
