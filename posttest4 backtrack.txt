@@ -1,0 +1,17 @@
+backtrack
+goal program adalah mencari warna dari mobil corvette dengan syarat harus memiliki model,warna, dan harga. warna mobil juga harus tergolong sexy, yaitu warna merah. karna ada fungsi ! (not) pada aturan harga tidak melebihi 25000, maka aturan hanya sampai berwarna merah.
+urutan pembacaan fatkanya adalah sesuai urutan "car dalam clauses yaitu
+  car(maserati,green,25000).
+  car(corvette,black,24000).
+  car(corvette,red,26000).
+  car(porsche,red,24000).
+dan untuk mengetahui warna mana yang tergolong seksi, maka ditambah sekelompok fakta warna
+  colors(red,sexy).
+  colors(black,mean).
+  colors(green,preppy).
+
+jika dibaca dari fakta mobil yang pertama ( car(maserati,green,25000).) maka syarat pertama sudah tidak lulus, yaitu model mobil tidak sesuai, yang dicari adalah merek corvette
+
+lalu dibaca dari fakta mobil yang kedua ( car(corvette,black,24000).) maka syarat pertama lulus, mobil yang dicari adalah corvette, selanjutnya dilihat dari syarat kedua,yaitu mobil harus memiliki model, warna, dan harga, syarat ini juga lulus, lalu dilihat dari syarat ketiga, yaitu warna mobil harus seksi, dalam fakta color, warna hitam bukanlah warna yang seksi, maka tidak lulus di fakta ketiga, maka fakta mobil yang kedua tidak lulus.
+
+lalu dibaca lagi fakta mobil yang ketiga (car(corvette,red,26000).) maka syarat pertama lulus, merek mobil corvette, lalu dilihat dari lagi dari fakta kedua, yaitu memiliki model, warna, dan harga, syarat ini juga lulus, lalu dilihat lagi syarat ke3, warna mobil haruslah seksi, yang mana warna seksi menurut fakta colors adalah red, maka corvette merah dengan harga 26000 ini dinyatakan goal. dan lacak balik berenti mencari fakta - fakta lainnya.
